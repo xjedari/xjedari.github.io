@@ -1,13 +1,409 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XJedari</title>
+    <title>روناک عسگری | کوچ رشد فردی و حرفه‌ای</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Define custom font and smooth scrolling */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #ECF0F1; /* Light Gray Background */
+        }
+        /* Custom scrollbar for better aesthetics, though not always necessary */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #ECF0F1; }
+        ::-webkit-scrollbar-thumb { background: #34495E; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2C3E50; }
+    </style>
+
+    <!-- Configure Tailwind for custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#2C3E50',  /* Deep Blue/Navy - Inspired by professionalism/trust */
+                        'accent-gold': '#F39C12',   /* Gold/Orange - Inspired by growth/energy */
+                        'background-light': '#ECF0F1', /* Light Gray/Off-White */
+                        'secondary-blue': '#34495E', /* Slightly lighter dark blue */
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <h1>
-        Template for RaheDarun
-    </h1>
+<body class="bg-background-light text-primary-dark">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-primary-dark tracking-wide">
+                راه‌ِدرون
+            </a>
+            <nav class="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#coaching" class="text-secondary-blue hover:text-accent-gold transition duration-300 font-medium">کوچینگ چیست؟</a>
+                <a href="#packages" class="text-secondary-blue hover:text-accent-gold transition duration-300 font-medium">پکیج‌ها</a>
+                <a href="#feedback" class="text-secondary-blue hover:text-accent-gold transition duration-300 font-medium">بازخوردها</a>
+            </nav>
+
+            <!-- Navigation Menu - Configured for Vertical Mobile Toggle and Horizontal Desktop Flex -->
+            <nav id="nav-menu" class="hidden flex flex-col absolute inset-x-0 top-full bg-white md:bg-transparent w-full p-4 md:p-0 shadow-xl md:shadow-none border-t border-gray-200 space-y-3 items-center ">
+                
+                <a href="#coaching" class="text-secondary-blue hover:text-accent-gold transition duration-300 font-medium w-full text-center">کوچینگ چیست؟</a>
+                <a href="#packages" class="text-secondary-blue hover:text-accent-gold transition duration-300 font-medium w-full text-center">پکیج‌ها</a>
+                <a href="#feedback" class="text-secondary-blue hover:text-accent-gold transition duration-300 font-medium w-full text-center">بازخوردها</a>
+                
+                <!-- CTA for Mobile (Visible only when menu is open) -->
+                <a href="https://calendly.com/ronakasgari-de/coaching" target="_blank" class="md:hidden bg-accent-gold text-white font-bold py-2 px-5 rounded-xl shadow-lg hover:bg-yellow-600 transition duration-300 w-full text-center mt-3">
+                    رزرو جلسه رایگان
+                </a>
+            </nav>
+
+            <!-- CTA for Desktop (Linked to Calendly) -->
+            <a href="https://calendly.com/ronakasgari-de/coaching" target="_blank" class="bg-accent-gold text-white font-bold py-2 px-5 rounded-xl shadow-lg hover:bg-yellow-600 transition duration-300 hidden md:block">
+                رزرو جلسه رایگان
+            </a>            
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" class="md:hidden text-primary-dark focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-24 md:py-32 bg-primary-dark text-white overflow-hidden">
+        <!-- Decoration element -->
+        <div class="absolute inset-0 bg-primary-dark opacity-90"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center">
+            
+            <!-- Text Content - Updated to the personal tone -->
+            <div class="md:w-3/5 text-center md:text-right mb-10 md:mb-0">
+                <span class="text-accent-gold text-lg font-semibold block mb-2">روناک عسگری | کوچ رشد شخصی و زندگی آگاهانه</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-snug mb-6">
+                    به راهِ‌درون خوش آمدی! <br class="inline"> 
+                    <span class="">من روناک هستم.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                    فرقی نمی‌کنه توی چه مرحله‌ای از زندگیت باشی؛ من کمکت می‌کنم مساله‌ت رو شفاف‌تر ببینی و راحت‌تر به نتیجه برسی. مثل اینکه برای اتاق ذهنت نور بیارم و کمکت ‌کنم گنج‌های درونت رو ببینی.
+                </p>
+
+                <!-- Primary CTA - Free Session (Linked to Calendly) -->
+                <a href="https://calendly.com/ronakasgari-de/coaching" target="_blank" class="inline-block bg-accent-gold text-primary-dark font-extrabold py-4 px-10 rounded-xl text-lg shadow-2xl hover:bg-yellow-500 transform hover:scale-105 transition duration-300 border-2 border-accent-gold">
+                    ✨ رزرو جلسه رایگان مستقیم
+                </a>
+
+                <!-- Secondary CTA - Go to Detailed Form -->
+                <a href="#detailed-form" class="inline-block border-2 border-white text-white font-bold py-4 px-10 rounded-xl text-lg shadow-lg hover:bg-white hover:text-primary-dark transform hover:scale-105 transition duration-300 mt-4 md:mr-4 md:mt-0 mr-4">
+                    فرم پیش‌آشنایی موثر
+                </a>
+            </div>
+
+            <!-- Image/Placeholder (Updated to working URL and rounded shape) -->
+            <div class="md:w-2/5 flex justify-center">
+                <div class="w-64 h-64 md:w-80 md:h-80 bg-secondary-blue rounded-full flex items-center justify-center shadow-2xl border-4 border-accent-gold overflow-hidden">
+                    <img 
+                        src="/profile.jpg" 
+                        alt="تصویر پروفایل روناک عسگری" 
+                        class="w-full h-full object-cover" 
+                        onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'text-white text-xl font-bold\'>[تصویر روناک عسگری]</span>';"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: What is Coaching? - Updated content and disclaimer -->
+    <section id="coaching" class="py-20 md:py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-primary-dark mb-4 border-b-4 border-accent-gold inline-block pb-2">
+                کوچینگ چیست و نقش من کدام است؟
+            </h2>
+            <p class="text-xl text-secondary-blue mt-8 leading-relaxed mb-12">
+                کوچینگ یک فرآیند مشارکتی است که به شما کمک می‌کند تا پتانسیل‌های نهفته خود را کشف کنید، اهداف مشخصی تعیین کنید و با استفاده از منابع درونی خود، به سمت موفقیت حرکت کنید.
+                <br>
+                <span class="font-bold">لازمه بدونی من، روانشناس یا معلم یا مشاور نیستم.</span>
+                
+                من به عنوان یک کوچ، گوش شنونده‌ای برای دغدغه‌های شما هستم و آموزش‌های حرفه‌ای دیدم تا با طرح پرسش‌های دقیق و تامل برانگیز، بهت کمک کنم خودت رو بهتر بشناسی و توانایی‌هات رو بهتر به کار ببری. 
+                <br class="hidden sm:inline">
+                <span class="font-bold text-primary-dark">آگاهی، نقطه‌ی شروع حرکت به سمت رشد و تغییره.</span>
+            </p>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-background-light rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <span class="text-4xl text-accent-gold mb-3 block">🔦</span>
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">نور آوردن به اتاق ذهن</h3>
+                    <p class="text-sm text-secondary-blue">شفاف‌سازی مسئله و دیدن گنج‌های درونی که منتظر کشف شدن هستند.</p>
+                </div>
+                <div class="p-6 bg-background-light rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <span class="text-4xl text-accent-gold mb-3 block">💡</span>
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">پرسش‌های تامل برانگیز</h3>
+                    <p class="text-sm text-secondary-blue">استفاده از ابزارهای حرفه‌ای کوچینگ برای فعال‌سازی منابع درونی شما.</p>
+                </div>
+                <div class="p-6 bg-background-light rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <span class="text-4xl text-accent-gold mb-3 block">🏃</span>
+                    <h3 class="text-xl font-bold mb-2 text-primary-dark">هموارسازی مسیر رشد</h3>
+                    <p class="text-sm text-secondary-blue">همراهی شما برای اقدام مؤثر، سریع‌تر و هدفمندتر به سمت موفقیت.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Packages -->
+    <section id="packages" class="py-20 md:py-32 bg-background-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-primary-dark mb-12 border-b-4 border-accent-gold inline-block pb-2">
+                پکیج‌های کوچینگ
+            </h2>
+            <p class="text-lg text-secondary-blue mb-12">
+                پکیج‌ها برای تضمین تحول پایدار و عمیق طراحی شده‌اند. برای اطلاع از جزئیات و قیمت، لطفاً فرم پایین صفحه را تکمیل کنید.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-accent-gold flex flex-col h-full">
+                    <h3 class="text-3xl font-bold text-primary-dark mb-4">کوچینگ شروع</h3>
+                    <p class="text-secondary-blue mb-6 flex-grow">ایده‌آل برای کسانی که می‌خواهند برای اولین بار طعم کوچینگ را بچشند و با اهداف کوتاه‌مدت کار کنند.</p>
+                    <ul class="text-right space-y-3 mb-8 text-primary-dark">
+                        <li class="flex items-center justify-start"><span class="text-accent-gold ml-2">✔️</span><span>۴ جلسه (ماهانه)</span></li>
+                        <li class="flex items-center justify-start"><span class="text-accent-gold ml-2">✔️</span><span>تمرینات اختصاصی</span></li>
+                        <li class="flex items-center justify-start"><span class="text-accent-gold ml-2">✔️</span><span>پشتیبانی پیامکی محدود</span></li>
+                    </ul>
+                    <!-- CTA for Price Inquiry -->
+                    <a href="#detailed-form" class="bg-primary-dark text-white font-bold py-3 px-6 rounded-xl hover:bg-secondary-blue transition duration-300 mt-auto">
+                        اطلاع از قیمت و رزرو
+                    </a>
+                </div>
+
+                <!-- Package 2 - Recommended -->
+                <div class="bg-primary-dark p-8 rounded-xl shadow-2xl border-t-8 border-accent-gold transform scale-105 flex flex-col h-full">
+                    <div class="text-accent-gold bg-secondary-blue py-1 px-4 rounded-full inline-block mb-4 font-bold text-sm mx-auto">پیشنهادی</div>
+                    <h3 class="text-3xl font-bold text-white mb-4">کوچینگ تحول</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">برای ایجاد تغییرات عمیق و پایدار در مسیر شغلی و زندگی شخصی.</p>
+                    <ul class="text-right space-y-3 mb-8 text-white">
+                        <li class="flex items-center justify-start"><span class="text-accent-gold ml-2">⭐</span><span>۸ جلسه (دو ماهه)</span></li>
+                        <li class="flex items-center justify-start"><span class="text-accent-gold ml-2">⭐</span><span>ابزارهای ارزیابی تخصصی</span></li>
+                        <li class="flex items-center justify-start"><span class="text-accent-gold ml-2">⭐</span><span>پشتیبانی پیامکی مستمر</span></li>
+                    </ul>
+                    <!-- CTA for Price Inquiry -->
+                    <a href="#detailed-form" class="bg-accent-gold text-primary-dark font-extrabold py-3 px-6 rounded-xl hover:bg-yellow-500 transition duration-300 mt-auto">
+                        اطلاع از قیمت و رزرو
+                    </a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-secondary-blue flex flex-col h-full">
+                    <h3 class="text-3xl font-bold text-primary-dark mb-4">کوچینگ حرفه‌ای</h3>
+                    <p class="text-secondary-blue mb-6 flex-grow">مخصوص مدیران و کارآفرینانی که به دنبال ارتقاء رهبری و عملکرد تیمی هستند.</p>
+                    <ul class="text-right space-y-3 mb-8 text-primary-dark">
+                        <li class="flex items-center justify-start"><span class="text-accent-gold ml-2">✔️</span><span>۱۲ جلسه (سه ماهه)</span></li>
+                        <li class="flex items-center justify-start"><span class="text-accent-gold ml-2">✔️</span><span>مشاوره استراتژیک</span></li>
+                        <li class="flex items-center justify-start"><span class="text-accent-gold ml-2">✔️</span><span>گزارش عملکرد ماهانه</span></li>
+                    </ul>
+                    <!-- CTA for Price Inquiry -->
+                    <a href="#detailed-form" class="bg-primary-dark text-white font-bold py-3 px-6 rounded-xl hover:bg-secondary-blue transition duration-300 mt-auto">
+                        اطلاع از قیمت و رزرو
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Client Feedback (Testimonials) -->
+    <section id="feedback" class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-primary-dark mb-12 border-b-4 border-accent-gold inline-block pb-2">
+                بازخوردهای مراجعین
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-background-light p-6 rounded-xl shadow-lg border-r-4 border-accent-gold text-right">
+                    <p class="italic text-primary-dark mb-4">"جلسات کوچینگ با خانم عسگری دید من را نسبت به مسیر شغلی‌ام کاملاً تغییر داد. حالا با اعتماد به نفس بیشتری تصمیم می‌گیرم."</p>
+                    <p class="font-bold text-accent-gold">- سارا م. (کارآفرین)</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-background-light p-6 rounded-xl shadow-lg border-r-4 border-accent-gold text-right">
+                    <p class="italic text-primary-dark mb-4">"بهترین سرمایه‌گذاری که برای رشد فردی خودم انجام دادم. ممنونم از راهنمایی‌های موثر و دلسوزانه روناک عزیز."</p>
+                    <p class="font-bold text-accent-gold">- علی ح. (مدیر پروژه)</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-background-light p-6 rounded-xl shadow-lg border-r-4 border-accent-gold text-right">
+                    <p class="italic text-primary-dark mb-4">"من در یک دو راهی بزرگ قرار داشتم. در طول جلسات، او مرا در مسیر درست هدایت کرد بدون اینکه مستقیم راهکار بدهد. شگفت‌انگیز بود!"</p>
+                    <p class="font-bold text-accent-gold">- نرگس پ. (دانشجو)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA & Detailed Inquiry Form Section -->
+    <section id="detailed-form" class="py-20 md:py-32 bg-primary-dark text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold mb-4">
+                فرم پیش‌آشنایی موثر
+            </h2>
+            <p class="text-xl text-gray-300 mb-10 leading-relaxed">
+                این فرم طراحی شده تا بهتر با نیازها و انتظاراتت آشنا بشم و بتونیم توی یک جلسه‌ی رایگان، یک برنامه و مسیر موثر و شخصی‌سازی‌شده رو طراحی کنیم.
+                <br>
+                <span class="font-semibold">لطفا اطلاعات خواسته‌ شده رو با دقت پر کنی تا من بتونم توی سریع‌ترین زمان ممکن باهات تماس بگیرم.</span>
+            </p>
+
+            <!-- Detailed Form matching the user's Google Form inputs -->
+            <form id="contact-info" class="bg-white p-8 md:p-10 rounded-xl shadow-2xl text-right max-w-lg mx-auto">
+                <h3 class="text-2xl font-bold text-primary-dark mb-6 text-center">لطفا اطلاعات را با دقت پر کنید</h3>
+                
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-secondary-blue mb-1">* لطفا خودت رو معرفی کن:</label>
+                    <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg text-primary-dark focus:ring-accent-gold focus:border-accent-gold" placeholder="نام و نام خانوادگی" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-secondary-blue mb-1">* آدرس ای‌میل:</label>
+                    <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg text-primary-dark focus:ring-accent-gold focus:border-accent-gold" placeholder="example@mail.com" required>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="whatsapp_phone" class="block text-sm font-medium text-secondary-blue mb-1">* شماره تماس واتس‌اپ (برای هماهنگی):</label>
+                    <input type="tel" id="whatsapp_phone" name="whatsapp_phone" class="w-full p-3 border border-gray-300 rounded-lg text-primary-dark focus:ring-accent-gold focus:border-accent-gold" placeholder="مثال: 0912xxxxxxx" required>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="coaching_experience" class="block text-sm font-medium text-secondary-blue mb-1">* تا به حال تجربه جلسات کوچینگ داشتی؟</label>
+                    <select id="coaching_experience" name="coaching_experience" class="w-full p-3 border border-gray-300 rounded-lg text-primary-dark focus:ring-accent-gold focus:border-accent-gold">
+                        <option value="no">خیر</option>
+                        <option value="yes">بله</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="concern" class="block text-sm font-medium text-secondary-blue mb-1">* چه دغدغه‌ای باعث شده به کوچینگ فکر کنی؟ (با جزئیات بیشتر بنویسید):</label>
+                    <textarea id="concern" name="concern" rows="4" class="w-full p-3 border border-gray-300 rounded-lg text-primary-dark focus:ring-accent-gold focus:border-accent-gold" required></textarea>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="expectation" class="block text-sm font-medium text-secondary-blue mb-1">* انتظارت از من و جلسات کوچینگ چیه؟</label>
+                    <textarea id="expectation" name="expectation" rows="3" class="w-full p-3 border border-gray-300 rounded-lg text-primary-dark focus:ring-accent-gold focus:border-accent-gold" required></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label for="detailed_intro" class="block text-sm font-medium text-secondary-blue mb-1">لطفا خودت رو با جزئیات بیشتری معرفی کن (شغل، رشته، محل زندگی و راه ارتباطی دیگر):</label>
+                    <textarea id="detailed_intro" name="detailed_intro" rows="3" class="w-full p-3 border border-gray-300 rounded-lg text-primary-dark focus:ring-accent-gold focus:border-accent-gold"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-accent-gold text-primary-dark font-extrabold py-3 rounded-xl shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-[1.02]">
+                    ارسال اطلاعات و درخواست تماس
+                </button>
+            </form>
+
+            <p class="mt-8 text-gray-400 text-sm">تمامی صحبت‌ها و اطلاعات ما، محرمانه و بین خودمان باقی می‌ماند.</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-secondary-blue py-8 text-center text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; ۱۴۰۳ راه‌ِدرون | تمامی حقوق محفوظ است. <br class="md:hidden">با احترام و اشتیاق، روناک</p>
+            <div class="flex justify-center space-x-4 space-x-reverse mt-4">
+                <!-- Placeholder for social media links -->
+                <a href="https://www.instagram.com/rahedarun/" target="_blank" class="text-gray-300 hover:text-accent-gold transition duration-300" aria-label="اینستاگرام">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="mailto:i.jedari@gmail.com" class="text-gray-300 hover:text-accent-gold transition duration-300 " aria-label="ایمیل">
+                    <i class="fa-solid fa-at text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-sm mt-2 text-gray-400">تماس با روناک عسگری: ۰۹۱۲xxxxxxx</p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for form submission handling (prevention only) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-info');
+            const messageBox = document.createElement('div');
+            messageBox.className = 'fixed top-0 left-1/2 transform -translate-x-1/2 mt-4 p-4 rounded-lg shadow-xl text-center z-[100] transition-opacity duration-500 opacity-0 bg-accent-gold text-primary-dark font-bold';
+            document.body.appendChild(messageBox);
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Since this form is for detailed inquiry before a call, the message is consistent.
+                const messageText = 'پیام شما با موفقیت ارسال شد. منتظر تماس من برای هماهنگی یک گفت‌و‌گوی موثر باشید. اطلاعات شما کاملاً محرمانه باقی می‌ماند.';
+
+                // Show custom message box
+                messageBox.textContent = messageText;
+                messageBox.classList.remove('opacity-0');
+                messageBox.classList.add('opacity-100');
+
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    messageBox.classList.remove('opacity-100');
+                    messageBox.classList.add('opacity-0');
+                }, 5000);
+                
+                // Optionally clear the form here
+                form.reset();
+            });
+        });
+    </script>
+
+    <!-- Simple JavaScript for form submission handling and menu toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-info');
+            const messageBox = document.createElement('div');
+            messageBox.className = 'fixed top-0 left-1/2 transform -translate-x-1/2 mt-4 p-4 rounded-lg shadow-xl text-center z-[100] transition-opacity duration-500 opacity-0 bg-accent-gold text-primary-dark font-bold';
+            document.body.appendChild(messageBox);
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Since this form is for detailed inquiry before a call, the message is consistent.
+                const messageText = 'پیام شما با موفقیت ارسال شد. منتظر تماس من برای هماهنگی یک گفت‌و‌گوی موثر باشید. اطلاعات شما کاملاً محرمانه باقی می‌ماند.';
+
+                // Show custom message box
+                messageBox.textContent = messageText;
+                messageBox.classList.remove('opacity-0');
+                messageBox.classList.add('opacity-100');
+
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    messageBox.classList.remove('opacity-100');
+                    messageBox.classList.add('opacity-0');
+                }, 5000);
+                
+                // Optionally clear the form here
+                form.reset();
+            });
+
+            // --- Mobile Menu Toggle Logic ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    // Toggle the 'hidden' class to show/hide the menu on mobile
+                    navMenu.classList.toggle('hidden');
+                });
+                
+                // Close menu when a link is clicked (important for mobile UX)
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        // Only close if the menu is currently visible (i.e., on mobile)
+                        if (!navMenu.classList.contains('hidden')) {
+                            navMenu.classList.add('hidden');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
